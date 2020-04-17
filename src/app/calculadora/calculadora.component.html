@@ -1,0 +1,21 @@
+<div class="row p-4">
+    <div class="col-12">
+        <input type="text" class="form-control" id="inputCalc" readonly value="{{ resultado }}">
+    </div>
+</div>
+
+<div class="row p-2">
+    <div *ngFor="let botaoLongo of botoesLongos" class="col-md-6">
+        <button type="button"  class="btn btn-warning btn-lg btn-block" (click)="addExpressao(botaoLongo)">
+            {{botaoLongo}}
+        </button>
+    </div>
+    <div class="row p-2">
+        <div  *ngFor="let botao of botoes" class="col-md-3">
+            <button type="button" class="btn btn-dark btn-lg btn-block" (click)="addExpressao(botao)">
+                {{botao}}
+            </button>
+            <br>
+        </div>
+    </div>
+</div>
